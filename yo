@@ -1,0 +1,14 @@
+from vex import *
+
+# Create a brain and motor object
+brain = Brain()
+motor1 = Motor(Ports.PORT1, GearSetting.RATIO_18_1, False)
+
+# Spin the motor forward at 50% power
+motor1.spin(DirectionType.FWD, 50, VelocityUnits.PCT)
+
+# Wait for 2 seconds
+wait(2, Seconds)
+
+# Stop the motor
+motor1.stop()
